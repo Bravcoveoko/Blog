@@ -30,8 +30,8 @@
             return;
         }
 
-        $sqlInsert = "INSERT INTO users (id, name, password)
-                VALUES (6, '".$_POST["username"]."','".$_POST["password"]."')";
+        $sqlInsert = "INSERT INTO users ( name, password)
+                VALUES ('".$_POST["username"]."','".$_POST["password"]."')";
 
         $res = mysqli_query($conn, $sqlInsert);
 

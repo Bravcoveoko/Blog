@@ -14,11 +14,21 @@
     <div class="content">
         <h2 class="content-title">Recent Articles</h2>
         <hr>
+
+        <?php require 'includes/show_articles.php' ?>
+
+        <?php foreach ($all_posts as $post): ?>
+            <div class="post" style="margin-left: 0px;">
+                <a href="single_post.php?post-slug=<?php echo $post['slug']; ?>&post-title=<?php echo $post['title']; ?>">
+                    <div class="post_info">
+                        <h3><?php echo $post['title'] ?></h3>
+                    </div>
+                </a>
+            </div>
+        <?php endforeach ?>
         <!-- more content still to come here ... -->
     </div>
     <!-- // Page content -->
-
-    <?php require 'includes/show_articles.php' ?>
 
     <!-- footer -->
     <?php include 'includes/footer.php' ?>
