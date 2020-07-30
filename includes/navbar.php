@@ -10,6 +10,10 @@
             <li><a href="#about">About</a></li>
             <li><a href="login.php">Log in</a></li>
             <li><a href="register.php">Register</a></li>
+
+            <?php if (isset($_COOKIE['userName'])): ?>
+                <li><a href="logout.php">Log out</a></li>
+            <?php endif;?>
         </ul>
     </div>
 

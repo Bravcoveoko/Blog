@@ -26,6 +26,16 @@
                 </a>
             </div>
         <?php endforeach ?>
+
+        <?php if (isset($_COOKIE['userName'])): ?>
+            <div class="post" style="margin-left: 0px;">
+                <a href="add_post.php?>">
+                    <div class="post_info">
+                        <h3>Add new Post</h3>
+                    </div>
+                </a>
+            </div>
+        <?php endif; ?>
         <!-- more content still to come here ... -->
     </div>
     <!-- // Page content -->
